@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const User = require('../models/userModel');
-
 const connectDB = async () => {
   try {
     await mongoose.connect('mongodb://root:password@localhost:27017');

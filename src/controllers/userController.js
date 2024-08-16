@@ -2,6 +2,9 @@ const User = require('../models/userModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+username = 'jpreziuso14'
+password = 'MTI2OTEtanByZXpp'
+
 // User registration
 exports.registerUser = async (req, res) => {
   try {
@@ -44,7 +47,7 @@ exports.loginUser = async (req, res) => {
     }
 
     // Generate a JSON Web Token (JWT)
-    const token = jwt.sign({ username: existingUser.username }, '60ffb8d78e724c02799b34b8f1db94bbdbcf4c415fa8bdecd837bbda28fbab8e', { expiresIn: '1h' });
+    const token = jwt.sign({ username: existingUser.username }, '648187c0bb64f538ccb7eb0765b488d901e1f4099da6b0ce9c1b33e11697233a', { expiresIn: '1h' });
 
     return res.status(200).json({ token });
   } catch (error) {
